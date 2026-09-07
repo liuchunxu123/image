@@ -7,7 +7,7 @@
 
     <title>Image</title>
 
-    <!-- 微信/社交平台链接预览 -->
+    <!-- 微信等平台的链接预览图片 -->
     <meta property="og:title" content="Image">
     <meta property="og:description" content="">
     <meta property="og:image" content="https://liuchunxu123.github.io/image/A.png">
@@ -47,11 +47,21 @@
 <img id="currentImage" alt="Image">
 
 <script>
+    /*
+     * 当前显示的图片
+     *
+     * 第一次测试：
+     * A.png
+     *
+     * 以后切换成 B：
+     * B.jpg
+     */
+    const CURRENT_IMAGE = "A.png";
+
     const image = document.getElementById("currentImage");
 
-    // 每次打开网页都重新请求 current.jpg
-    // 避免浏览器一直使用旧缓存
-    image.src = "./current.jpg?v=" + Date.now();
+    // 加时间戳，避免浏览器继续使用旧缓存
+    image.src = CURRENT_IMAGE + "?v=" + Date.now();
 </script>
 
 </body>
