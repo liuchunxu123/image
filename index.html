@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -5,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Image</title>
+
+    <!-- 微信/社交平台链接预览 -->
+    <meta property="og:title" content="Image">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://liuchunxu123.github.io/image/A.png">
+    <meta property="og:url" content="https://liuchunxu123.github.io/image/">
+    <meta property="og:type" content="website">
 
     <style>
         html,
@@ -36,15 +44,16 @@
 
 <body>
 
-<img id="currentImage">
+<img id="currentImage" alt="Image">
 
 <script>
     const image = document.getElementById("currentImage");
 
-    // 每次打开网页都重新请求 current.jpg，
+    // 每次打开网页都重新请求 current.jpg
     // 避免浏览器一直使用旧缓存
     image.src = "./current.jpg?v=" + Date.now();
 </script>
 
 </body>
 </html>
+```
